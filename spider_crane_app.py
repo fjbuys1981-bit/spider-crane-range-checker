@@ -1,5 +1,7 @@
+import base64
 import io
 import re
+import tempfile
 from pathlib import Path
 from datetime import datetime
 
@@ -488,8 +490,22 @@ def cad_image_path(crane_name):
 
 
 def chart_image_path(crane_name):
-    path = ASSET_DIR / f"{crane_name}_chart.jpg"
-    if path.exists():
+    filename = f"{crane_name}_chart.jpg"
+    for folder in (ASSET_DIR, Path(__file__).resolve().parent, Path.cwd()):
+        path = folder / filename
+        if path.exists():
+            return path
+    try:
+        from crane_chart_assets import CRANE_CHART_IMAGES
+    except ImportError:
+        CRANE_CHART_IMAGES = {}
+    encoded = CRANE_CHART_IMAGES.get(crane_name)
+    if encoded:
+        cache_dir = Path(tempfile.gettempdir()) / "preston_hire_crane_charts"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        path = cache_dir / filename
+        if not path.exists():
+            path.write_bytes(base64.b64decode(encoded))
         return path
     return None
 
