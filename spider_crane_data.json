@@ -1,0 +1,1978 @@
+{
+  "models": {
+    "MC104C": {
+      "family": "Maeda",
+      "boom_weight": 174,
+      "g": 0.187,
+      "super_weight": 72.3,
+      "super_cg": 0.082,
+      "r0": 0.2,
+      "carrier_weight": 788.7,
+      "carrier_cg": 0.457,
+      "boom_lengths": {
+        "1": 1.85,
+        "2": 3,
+        "3": 4.15,
+        "4": 5.3
+      },
+      "boom_cg": {
+        "1": 0.815,
+        "2": 1.247,
+        "3": 1.679,
+        "4": 2.111
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.052,
+          "a": 3.4,
+          "cf": 2.785,
+          "cr": 3.3
+        },
+        "Min": {
+          "sa": 1.675,
+          "a": 2.485,
+          "cf": 1.71,
+          "cr": 1.985
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "MC174CRM": {
+      "family": "Maeda",
+      "boom_weight": 229.1,
+      "g": 0.134,
+      "super_weight": 104.52,
+      "super_cg": 0.137,
+      "r0": 0.277,
+      "carrier_weight": 936.38,
+      "carrier_cg": 0.515,
+      "boom_lengths": {
+        "1": 1.7,
+        "2": 2.965,
+        "3": 4.205,
+        "4": 5.445
+      },
+      "boom_cg": {
+        "1": 0.954538,
+        "2": 1.714603,
+        "3": 2.049049,
+        "4": 2.383494
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.128,
+          "a": 3.335,
+          "cf": 2.885,
+          "cr": 3.06
+        },
+        "Min": {
+          "sa": 1.743,
+          "a": 2.77,
+          "cf": 2.455,
+          "cr": 1.945
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "MC235C": {
+      "family": "Maeda",
+      "boom_weight": 286,
+      "g": 0.1251,
+      "super_weight": 102.6,
+      "super_cg": 0.159,
+      "r0": 0.34,
+      "carrier_weight": 1151.4,
+      "carrier_cg": 0.41,
+      "boom_lengths": {
+        "1": 1.89,
+        "2": 2.98,
+        "3": 4.03,
+        "4": 5.08,
+        "5": 6.13
+      },
+      "boom_cg": {
+        "1": 0.963,
+        "2": 1.727,
+        "3": 1.996,
+        "4": 2.265,
+        "5": 2.534
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.298,
+          "a": 3.956,
+          "cf": 3.259,
+          "cr": 3.874
+        },
+        "Min": {
+          "sa": 1.653,
+          "a": 2.747,
+          "cf": 2.13,
+          "cr": 1.64
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "MC235CL": {
+      "family": "Maeda",
+      "boom_weight": 314.8,
+      "g": 0.1151,
+      "super_weight": 102.6,
+      "super_cg": 0.159,
+      "r0": 0.34,
+      "carrier_weight": 1162.6,
+      "carrier_cg": 0.41,
+      "boom_lengths": {
+        "1": 2.2,
+        "2": 3.49,
+        "3": 4.74,
+        "4": 5.99,
+        "5": 7.24
+      },
+      "boom_cg": {
+        "1": 1.085,
+        "2": 1.964,
+        "3": 2.323,
+        "4": 2.682,
+        "5": 3.041
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.298,
+          "a": 3.956,
+          "cf": 3.259,
+          "cr": 3.874
+        },
+        "Min": {
+          "sa": 1.653,
+          "a": 2.747,
+          "cf": 2.13,
+          "cr": 1.64
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "MC285CRM-2": {
+      "family": "Maeda",
+      "boom_weight": 355,
+      "g": 0.1336,
+      "super_weight": 139.2,
+      "super_cg": 0.084,
+      "r0": 0.37,
+      "carrier_weight": 1435.8,
+      "carrier_cg": 0.547,
+      "boom_lengths": {
+        "1": 2.535,
+        "2": 4.075,
+        "3": 5.575,
+        "4": 7.075,
+        "5": 8.575
+      },
+      "boom_cg": {
+        "1": 1.247,
+        "2": 2.337,
+        "3": 2.752,
+        "4": 3.168,
+        "5": 3.583
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.665,
+          "a": 4.58,
+          "cf": 3.81,
+          "cr": 4.53
+        },
+        "Min": {
+          "sa": 2.023,
+          "a": 3.03,
+          "cf": 2,
+          "cr": 2.31
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "MC285CRME-2": {
+      "family": "Maeda",
+      "boom_weight": 355,
+      "g": 0.1336,
+      "super_weight": 139.2,
+      "super_cg": 0.084,
+      "r0": 0.37,
+      "carrier_weight": 1595.8,
+      "carrier_cg": 0.445,
+      "boom_lengths": {
+        "1": 2.535,
+        "2": 4.075,
+        "3": 5.575,
+        "4": 7.075,
+        "5": 8.575
+      },
+      "boom_cg": {
+        "1": 1.247,
+        "2": 2.337,
+        "3": 2.752,
+        "4": 3.168,
+        "5": 3.583
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.665,
+          "a": 4.58,
+          "cf": 3.81,
+          "cr": 4.53
+        },
+        "Min": {
+          "sa": 2.023,
+          "a": 3.03,
+          "cf": 2,
+          "cr": 2.31
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "MC305CRM-2": {
+      "family": "Maeda",
+      "boom_weight": 646,
+      "g": 0.098,
+      "super_weight": 159,
+      "super_cg": 0.413,
+      "r0": 0.351,
+      "carrier_weight": 3205,
+      "carrier_cg": 0.971,
+      "boom_lengths": {
+        "1": 3.695,
+        "2": 5.945,
+        "3": 8.145,
+        "4": 10.315,
+        "5": 12.485
+      },
+      "boom_cg": {
+        "1": 1.678,
+        "2": 3.127,
+        "3": 4.056,
+        "4": 4.461,
+        "5": 4.866
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 2.782,
+          "a": 4.592,
+          "cf": 4.11,
+          "cr": 3.941
+        },
+        "Max": {
+          "sa": 2.913,
+          "a": 4.888,
+          "cf": 4.504,
+          "cr": 4.396
+        },
+        "Min": {
+          "sa": 2.648,
+          "a": 4.291,
+          "cf": 3.712,
+          "cr": 3.477
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "MC305CRME-2": {
+      "family": "Maeda",
+      "boom_weight": 646,
+      "g": 0.098,
+      "super_weight": 159,
+      "super_cg": 0.413,
+      "r0": 0.351,
+      "carrier_weight": 3065,
+      "carrier_cg": 1.047,
+      "boom_lengths": {
+        "1": 3.695,
+        "2": 5.945,
+        "3": 8.145,
+        "4": 10.315,
+        "5": 12.485
+      },
+      "boom_cg": {
+        "1": 1.678,
+        "2": 3.127,
+        "3": 4.056,
+        "4": 4.461,
+        "5": 4.866
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 2.782,
+          "a": 4.592,
+          "cf": 4.11,
+          "cr": 3.941
+        },
+        "Max": {
+          "sa": 2.913,
+          "a": 4.888,
+          "cf": 4.504,
+          "cr": 4.396
+        },
+        "Min": {
+          "sa": 2.648,
+          "a": 4.291,
+          "cf": 3.712,
+          "cr": 3.477
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "MC405CRM": {
+      "family": "Maeda",
+      "boom_weight": 1026.5,
+      "g": 0.1962,
+      "super_weight": 267.3,
+      "super_cg": 0.521,
+      "r0": 0.491,
+      "carrier_weight": 4256.3,
+      "carrier_cg": 1.176,
+      "boom_lengths": {
+        "1": 4.735,
+        "2": 7.695,
+        "3": 10.655,
+        "4": 13.565,
+        "5": 16.457
+      },
+      "boom_cg": {
+        "1": 2.288,
+        "2": 4.347,
+        "3": 5.722,
+        "4": 6.239,
+        "5": 6.757
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.42,
+          "a": 5.372,
+          "cf": 4.566,
+          "cr": 4.888
+        },
+        "Max": {
+          "sa": 3.602,
+          "a": 5.786,
+          "cf": 5.118,
+          "cr": 5.52
+        },
+        "Min": {
+          "sa": 3.235,
+          "a": 4.953,
+          "cf": 4.008,
+          "cr": 4.248
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "MC405CRME": {
+      "family": "Maeda",
+      "boom_weight": 1026.5,
+      "g": 0.1962,
+      "super_weight": 267.3,
+      "super_cg": 0.521,
+      "r0": 0.491,
+      "carrier_weight": 4406.3,
+      "carrier_cg": 1.246,
+      "boom_lengths": {
+        "1": 4.735,
+        "2": 7.695,
+        "3": 10.655,
+        "4": 13.565,
+        "5": 16.457
+      },
+      "boom_cg": {
+        "1": 2.288,
+        "2": 4.347,
+        "3": 5.722,
+        "4": 6.239,
+        "5": 6.757
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.42,
+          "a": 5.372,
+          "cf": 4.566,
+          "cr": 4.888
+        },
+        "Max": {
+          "sa": 3.602,
+          "a": 5.786,
+          "cf": 5.118,
+          "cr": 5.52
+        },
+        "Min": {
+          "sa": 3.235,
+          "a": 4.953,
+          "cf": 4.008,
+          "cr": 4.248
+        }
+      },
+      "source": "Point Load Maeda 1t to 4t (excluding hook).xlsx"
+    },
+    "URA376C": {
+      "family": "UNIC",
+      "boom_weight": 610,
+      "g": 0.171,
+      "super_weight": 160,
+      "super_cg": -0.216,
+      "r0": 0.16,
+      "carrier_weight": 2855,
+      "carrier_cg": 0.832,
+      "boom_lengths": {
+        "1": 3.63,
+        "2": 5.85,
+        "3": 8,
+        "4": 10.15,
+        "5": 12.3,
+        "6": 14.45
+      },
+      "boom_cg": {
+        "1": 1.9,
+        "2": 3.525,
+        "3": 4.16,
+        "4": 4.812,
+        "5": 5.415,
+        "6": 6
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 2.684,
+          "a": 4.258,
+          "cf": 1.7945,
+          "cr": 1.7945
+        },
+        "Max": {
+          "sa": 2.948,
+          "a": 4.709,
+          "cf": 2.058,
+          "cr": 2.058
+        },
+        "Min": {
+          "sa": 2.41,
+          "a": 3.79,
+          "cf": 1.52,
+          "cr": 1.52
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URA376CM": {
+      "family": "UNIC",
+      "boom_weight": 610,
+      "g": 0.171,
+      "super_weight": 160,
+      "super_cg": -0.216,
+      "r0": 0.16,
+      "carrier_weight": 3005,
+      "carrier_cg": 0.848,
+      "boom_lengths": {
+        "1": 3.63,
+        "2": 5.85,
+        "3": 8,
+        "4": 10.15,
+        "5": 12.3,
+        "6": 14.45
+      },
+      "boom_cg": {
+        "1": 1.9,
+        "2": 3.525,
+        "3": 4.16,
+        "4": 4.812,
+        "5": 5.415,
+        "6": 6
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 2.684,
+          "a": 4.258,
+          "cf": 1.7945,
+          "cr": 1.7945
+        },
+        "Max": {
+          "sa": 2.948,
+          "a": 4.709,
+          "cf": 2.058,
+          "cr": 2.058
+        },
+        "Min": {
+          "sa": 2.41,
+          "a": 3.79,
+          "cf": 1.52,
+          "cr": 1.52
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URA376CD": {
+      "family": "UNIC",
+      "boom_weight": 610,
+      "g": 0.171,
+      "super_weight": 160,
+      "super_cg": -0.216,
+      "r0": 0.16,
+      "carrier_weight": 2975,
+      "carrier_cg": 0.853,
+      "boom_lengths": {
+        "1": 3.63,
+        "2": 5.85,
+        "3": 8,
+        "4": 10.15,
+        "5": 12.3,
+        "6": 14.45
+      },
+      "boom_cg": {
+        "1": 1.9,
+        "2": 3.525,
+        "3": 4.16,
+        "4": 4.812,
+        "5": 5.415,
+        "6": 6
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 2.684,
+          "a": 4.258,
+          "cf": 1.7945,
+          "cr": 1.7945
+        },
+        "Max": {
+          "sa": 2.948,
+          "a": 4.709,
+          "cf": 2.058,
+          "cr": 2.058
+        },
+        "Min": {
+          "sa": 2.41,
+          "a": 3.79,
+          "cf": 1.52,
+          "cr": 1.52
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URA376CDM": {
+      "family": "UNIC",
+      "boom_weight": 610,
+      "g": 0.171,
+      "super_weight": 160,
+      "super_cg": -0.216,
+      "r0": 0.16,
+      "carrier_weight": 3125,
+      "carrier_cg": 0.867,
+      "boom_lengths": {
+        "1": 3.63,
+        "2": 5.85,
+        "3": 8,
+        "4": 10.15,
+        "5": 12.3,
+        "6": 14.45
+      },
+      "boom_cg": {
+        "1": 1.9,
+        "2": 3.525,
+        "3": 4.16,
+        "4": 4.812,
+        "5": 5.415,
+        "6": 6
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 2.684,
+          "a": 4.258,
+          "cf": 1.7945,
+          "cr": 1.7945
+        },
+        "Max": {
+          "sa": 2.948,
+          "a": 4.709,
+          "cf": 2.058,
+          "cr": 2.058
+        },
+        "Min": {
+          "sa": 2.41,
+          "a": 3.79,
+          "cf": 1.52,
+          "cr": 1.52
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW376CDE/C1E/C2E": {
+      "family": "UNIC",
+      "boom_weight": 627,
+      "g": 0.171,
+      "super_weight": 172,
+      "super_cg": -0.216,
+      "r0": 0.16,
+      "carrier_weight": 3051,
+      "carrier_cg": 0.85,
+      "boom_lengths": {
+        "1": 3.63,
+        "2": 5.85,
+        "3": 8.04,
+        "4": 10.23,
+        "5": 12.42,
+        "6": 14.61
+      },
+      "boom_cg": {
+        "1": 1.85,
+        "2": 3.525,
+        "3": 4.145,
+        "4": 4.77,
+        "5": 5.39,
+        "6": 6.04
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 2.567,
+          "a": 4.139,
+          "cf": 1.8975,
+          "cr": 1.8975
+        },
+        "Max": {
+          "sa": 2.807,
+          "a": 4.569,
+          "cf": 2.1835,
+          "cr": 2.1835
+        },
+        "Min": {
+          "sa": 2.318,
+          "a": 3.7,
+          "cf": 1.56,
+          "cr": 1.56
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW376CDEM/C1EM/C2EM": {
+      "family": "UNIC",
+      "boom_weight": 627,
+      "g": 0.171,
+      "super_weight": 172,
+      "super_cg": -0.216,
+      "r0": 0.16,
+      "carrier_weight": 3201,
+      "carrier_cg": 0.861,
+      "boom_lengths": {
+        "1": 3.63,
+        "2": 5.85,
+        "3": 8.04,
+        "4": 10.23,
+        "5": 12.42,
+        "6": 14.61
+      },
+      "boom_cg": {
+        "1": 1.85,
+        "2": 3.525,
+        "3": 4.145,
+        "4": 4.77,
+        "5": 5.39,
+        "6": 6.04
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 2.567,
+          "a": 4.139,
+          "cf": 1.8975,
+          "cr": 1.8975
+        },
+        "Max": {
+          "sa": 2.807,
+          "a": 4.569,
+          "cf": 2.1835,
+          "cr": 2.1835
+        },
+        "Min": {
+          "sa": 2.318,
+          "a": 3.7,
+          "cf": 1.56,
+          "cr": 1.56
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URA506C": {
+      "family": "UNIC",
+      "boom_weight": 900,
+      "g": 0.17,
+      "super_weight": 165,
+      "super_cg": -0.188,
+      "r0": 0.18,
+      "carrier_weight": 3630,
+      "carrier_cg": 0.757,
+      "boom_lengths": {
+        "1": 3.86,
+        "2": 6.26,
+        "3": 8.65,
+        "4": 10.98,
+        "5": 13.31,
+        "6": 15.64
+      },
+      "boom_cg": {
+        "1": 1.93,
+        "2": 3.69,
+        "3": 4.96,
+        "4": 5.46,
+        "5": 5.935,
+        "6": 6.415
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.08,
+          "a": 5.175,
+          "cf": 2.3735,
+          "cr": 2.3735
+        },
+        "Max": {
+          "sa": 3.488,
+          "a": 5.901,
+          "cf": 2.8595,
+          "cr": 2.8595
+        },
+        "Min": {
+          "sa": 2.799,
+          "a": 4.676,
+          "cf": 2.0385,
+          "cr": 2.0385
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URA506CM": {
+      "family": "UNIC",
+      "boom_weight": 900,
+      "g": 0.17,
+      "super_weight": 165,
+      "super_cg": -0.188,
+      "r0": 0.18,
+      "carrier_weight": 3780,
+      "carrier_cg": 0.772,
+      "boom_lengths": {
+        "1": 3.86,
+        "2": 6.26,
+        "3": 8.65,
+        "4": 10.98,
+        "5": 13.31,
+        "6": 15.64
+      },
+      "boom_cg": {
+        "1": 1.93,
+        "2": 3.69,
+        "3": 4.96,
+        "4": 5.46,
+        "5": 5.935,
+        "6": 6.415
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.08,
+          "a": 5.175,
+          "cf": 2.3735,
+          "cr": 2.3735
+        },
+        "Max": {
+          "sa": 3.488,
+          "a": 5.901,
+          "cf": 2.8595,
+          "cr": 2.8595
+        },
+        "Min": {
+          "sa": 2.799,
+          "a": 4.676,
+          "cf": 2.0385,
+          "cr": 2.0385
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URA506CD": {
+      "family": "UNIC",
+      "boom_weight": 900,
+      "g": 0.17,
+      "super_weight": 165,
+      "super_cg": -0.188,
+      "r0": 0.18,
+      "carrier_weight": 3750,
+      "carrier_cg": 0.785,
+      "boom_lengths": {
+        "1": 3.86,
+        "2": 6.26,
+        "3": 8.65,
+        "4": 10.98,
+        "5": 13.31,
+        "6": 15.64
+      },
+      "boom_cg": {
+        "1": 1.93,
+        "2": 3.69,
+        "3": 4.96,
+        "4": 5.46,
+        "5": 5.935,
+        "6": 6.415
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.08,
+          "a": 5.175,
+          "cf": 2.3735,
+          "cr": 2.3735
+        },
+        "Max": {
+          "sa": 3.488,
+          "a": 5.901,
+          "cf": 2.8595,
+          "cr": 2.8595
+        },
+        "Min": {
+          "sa": 2.799,
+          "a": 4.676,
+          "cf": 2.0385,
+          "cr": 2.0385
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URA506CDM": {
+      "family": "UNIC",
+      "boom_weight": 900,
+      "g": 0.17,
+      "super_weight": 165,
+      "super_cg": -0.188,
+      "r0": 0.18,
+      "carrier_weight": 3900,
+      "carrier_cg": 0.798,
+      "boom_lengths": {
+        "1": 3.86,
+        "2": 6.26,
+        "3": 8.65,
+        "4": 10.98,
+        "5": 13.31,
+        "6": 15.64
+      },
+      "boom_cg": {
+        "1": 1.93,
+        "2": 3.69,
+        "3": 4.96,
+        "4": 5.46,
+        "5": 5.935,
+        "6": 6.415
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.08,
+          "a": 5.175,
+          "cf": 2.3735,
+          "cr": 2.3735
+        },
+        "Max": {
+          "sa": 3.488,
+          "a": 5.901,
+          "cf": 2.8595,
+          "cr": 2.8595
+        },
+        "Min": {
+          "sa": 2.799,
+          "a": 4.676,
+          "cf": 2.0385,
+          "cr": 2.0385
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW506CDE/C1E/C2E": {
+      "family": "UNIC",
+      "boom_weight": 914,
+      "g": 0.1695,
+      "super_weight": 170,
+      "super_cg": -0.216,
+      "r0": 0.187,
+      "carrier_weight": 3724,
+      "carrier_cg": 0.785,
+      "boom_lengths": {
+        "1": 3.93,
+        "2": 6.33,
+        "3": 8.72,
+        "4": 11.05,
+        "5": 13.38,
+        "6": 15.71
+      },
+      "boom_cg": {
+        "1": 2.2,
+        "2": 3.85,
+        "3": 5.075,
+        "4": 5.565,
+        "5": 6.06,
+        "6": 6.53
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.081,
+          "a": 5.177,
+          "cf": 2.3745,
+          "cr": 2.3745
+        },
+        "Max": {
+          "sa": 3.488,
+          "a": 5.902,
+          "cf": 2.8605,
+          "cr": 2.8605
+        },
+        "Min": {
+          "sa": 2.8,
+          "a": 4.678,
+          "cf": 2.04,
+          "cr": 2.04
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW506CDEM/C1EM/C2EM": {
+      "family": "UNIC",
+      "boom_weight": 918,
+      "g": 0.1695,
+      "super_weight": 170,
+      "super_cg": -0.216,
+      "r0": 0.187,
+      "carrier_weight": 3900,
+      "carrier_cg": 0.798,
+      "boom_lengths": {
+        "1": 3.93,
+        "2": 6.33,
+        "3": 8.72,
+        "4": 11.05,
+        "5": 13.38,
+        "6": 15.71
+      },
+      "boom_cg": {
+        "1": 2.2,
+        "2": 3.85,
+        "3": 5.075,
+        "4": 5.565,
+        "5": 6.06,
+        "6": 6.53
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.081,
+          "a": 5.177,
+          "cf": 2.3745,
+          "cr": 2.3745
+        },
+        "Max": {
+          "sa": 3.488,
+          "a": 5.902,
+          "cf": 2.8605,
+          "cr": 2.8605
+        },
+        "Min": {
+          "sa": 2.8,
+          "a": 4.678,
+          "cf": 2.04,
+          "cr": 2.04
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW295CR-UK": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1311,
+      "carrier_cg": 0.727,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW095CR-UK": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1311,
+      "carrier_cg": 0.727,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW295CMR-UK": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1429,
+      "carrier_cg": 0.71,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW095CDE/C1E": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1381,
+      "carrier_cg": 0.717,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW295CE/CP2E": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1311,
+      "carrier_cg": 0.727,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW295CEM/CP2EM": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1429,
+      "carrier_cg": 0.71,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW095CE/CP2E": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1311,
+      "carrier_cg": 0.727,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW095CEM/CP2EM": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1429,
+      "carrier_cg": 0.71,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW094CE/CP2E": {
+      "family": "UNIC",
+      "boom_weight": 190,
+      "g": 0.116,
+      "super_weight": 105,
+      "super_cg": -0.098,
+      "r0": 0.32,
+      "carrier_weight": 690,
+      "carrier_cg": 0.485,
+      "boom_lengths": {
+        "1": 1.73,
+        "2": 3.01,
+        "3": 4.25,
+        "4": 5.49
+      },
+      "boom_cg": {
+        "1": 0.92,
+        "2": 1.82,
+        "3": 2.18,
+        "4": 2.53
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 1.956,
+          "a": 3.342,
+          "cf": 1.6055,
+          "cr": 1.6055
+        },
+        "Min": {
+          "sa": 1.404,
+          "a": 2.239,
+          "cf": 0.9335,
+          "cr": 0.9335
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW245CE": {
+      "family": "UNIC",
+      "boom_weight": 290,
+      "g": 0.1735,
+      "super_weight": 120,
+      "super_cg": 0.1,
+      "r0": 0.34,
+      "carrier_weight": 1060,
+      "carrier_cg": 0.45,
+      "boom_lengths": {
+        "1": 1.98,
+        "2": 3.05,
+        "3": 4.11,
+        "4": 5.15,
+        "5": 6.19
+      },
+      "boom_cg": {
+        "1": 1.09,
+        "2": 1.895,
+        "3": 2.435,
+        "4": 2.68,
+        "5": 2.92
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.012,
+          "a": 3.662,
+          "cf": 1.8455,
+          "cr": 1.8455
+        },
+        "Min": {
+          "sa": 1.538,
+          "a": 2.555,
+          "cf": 1.085,
+          "cr": 1.085
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW547C1E/C2E": {
+      "family": "UNIC",
+      "boom_weight": 1030,
+      "g": 0.1693,
+      "super_weight": 230,
+      "super_cg": -0.216,
+      "r0": 0.187,
+      "carrier_weight": 3750,
+      "carrier_cg": 0.785,
+      "boom_lengths": {
+        "1": 4.735,
+        "2": 7.695,
+        "3": 10.655,
+        "4": 13.568,
+        "5": 16.476,
+        "6": 18.02
+      },
+      "boom_cg": {
+        "1": 2.536,
+        "2": 4.687,
+        "3": 5.72,
+        "4": 6.378,
+        "5": 7.035,
+        "6": 7.383
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.08,
+          "a": 5.177,
+          "cf": 2.3735,
+          "cr": 2.3735
+        },
+        "Max": {
+          "sa": 3.488,
+          "a": 5.902,
+          "cf": 2.8595,
+          "cr": 2.8595
+        },
+        "Min": {
+          "sa": 2.799,
+          "a": 4.678,
+          "cf": 2.0385,
+          "cr": 2.0385
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW547C1EM/C2EM": {
+      "family": "UNIC",
+      "boom_weight": 1030,
+      "g": 0.1693,
+      "super_weight": 230,
+      "super_cg": -0.216,
+      "r0": 0.187,
+      "carrier_weight": 3900,
+      "carrier_cg": 0.798,
+      "boom_lengths": {
+        "1": 4.735,
+        "2": 7.695,
+        "3": 10.655,
+        "4": 13.568,
+        "5": 16.476,
+        "6": 18.02
+      },
+      "boom_cg": {
+        "1": 2.536,
+        "2": 4.687,
+        "3": 5.72,
+        "4": 6.378,
+        "5": 7.035,
+        "6": 7.383
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.08,
+          "a": 5.177,
+          "cf": 2.3735,
+          "cr": 2.3735
+        },
+        "Max": {
+          "sa": 3.488,
+          "a": 5.902,
+          "cf": 2.8595,
+          "cr": 2.8595
+        },
+        "Min": {
+          "sa": 2.799,
+          "a": 4.678,
+          "cf": 2.0385,
+          "cr": 2.0385
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW1006C2E": {
+      "family": "UNIC",
+      "boom_weight": 3938,
+      "g": 0.21,
+      "super_weight": 1000,
+      "super_cg": -0.35,
+      "r0": 1.17,
+      "carrier_weight": 8892,
+      "carrier_cg": 1.132,
+      "boom_lengths": {
+        "1": 5.75,
+        "2": 9.25,
+        "3": 12.75,
+        "4": 16.2,
+        "5": 19.65,
+        "6": 23.1
+      },
+      "boom_cg": {
+        "1": 2.795,
+        "2": 4.904,
+        "3": 6.416,
+        "4": 7.033,
+        "5": 7.658,
+        "6": 8.298
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.967,
+          "a": 6.076,
+          "cf": 3.0645,
+          "cr": 3.0645
+        },
+        "Max": {
+          "sa": 4.495,
+          "a": 6.651,
+          "cf": 3.528,
+          "cr": 3.528
+        },
+        "Min": {
+          "sa": 3.426,
+          "a": 5.487,
+          "cf": 2.589,
+          "cr": 2.589
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW1006C2EM": {
+      "family": "UNIC",
+      "boom_weight": 3938,
+      "g": 0.21,
+      "super_weight": 1000,
+      "super_cg": -0.35,
+      "r0": 1.17,
+      "carrier_weight": 9072,
+      "carrier_cg": 1.162,
+      "boom_lengths": {
+        "1": 5.75,
+        "2": 9.25,
+        "3": 12.75,
+        "4": 16.2,
+        "5": 19.65,
+        "6": 23.1
+      },
+      "boom_cg": {
+        "1": 2.795,
+        "2": 4.904,
+        "3": 6.416,
+        "4": 7.033,
+        "5": 7.658,
+        "6": 8.298
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.967,
+          "a": 6.076,
+          "cf": 3.0645,
+          "cr": 3.0645
+        },
+        "Max": {
+          "sa": 4.495,
+          "a": 6.651,
+          "cf": 3.528,
+          "cr": 3.528
+        },
+        "Min": {
+          "sa": 3.426,
+          "a": 5.487,
+          "cf": 2.589,
+          "cr": 2.589
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW095WBE": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1840,
+      "carrier_cg": 0.758,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW295WBE": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1840,
+      "carrier_cg": 0.758,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW295CDE/C1E": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1381,
+      "carrier_cg": 0.717,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.35,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW295CDEM/C1EM": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1551,
+      "carrier_cg": 0.866,
+      "boom_lengths": {
+        "1": 2.7,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.47,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW095CDEM/C1EM": {
+      "family": "UNIC",
+      "boom_weight": 364,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1551,
+      "carrier_cg": 0.866,
+      "boom_lengths": {
+        "1": 2.7,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 1.47,
+        "2": 2.45,
+        "3": 3.19,
+        "4": 3.52,
+        "5": 3.85
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        },
+        "Min": {
+          "sa": 1.618,
+          "a": 2.597,
+          "cf": 1.158,
+          "cr": 1.158
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW295C_Fly Jib": {
+      "family": "UNIC",
+      "boom_weight": 418.3,
+      "g": 0.17,
+      "super_weight": 178,
+      "super_cg": 0.062,
+      "r0": 0.24,
+      "carrier_weight": 1311,
+      "carrier_cg": 0.727,
+      "boom_lengths": {
+        "1": 2.53,
+        "2": 4.075,
+        "3": 5.61,
+        "4": 7.13,
+        "5": 8.65
+      },
+      "boom_cg": {
+        "1": 0.477087,
+        "2": 0.865825,
+        "3": 1.12734,
+        "4": 1.243961,
+        "5": 1.360583
+      },
+      "outrigger": {
+        "Max": {
+          "sa": 2.23,
+          "a": 3.897,
+          "cf": 1.9545,
+          "cr": 1.9545
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW376C_Fly Jib": {
+      "family": "UNIC",
+      "boom_weight": 693.78,
+      "g": 0.171,
+      "super_weight": 172,
+      "super_cg": -0.216,
+      "r0": 0.16,
+      "carrier_weight": 3051,
+      "carrier_cg": 0.85,
+      "boom_lengths": {
+        "1": 3.63,
+        "2": 5.85,
+        "3": 8.04,
+        "4": 10.23,
+        "5": 12.42,
+        "6": 14.61
+      },
+      "boom_cg": {
+        "1": 1.126165,
+        "2": 2.145801,
+        "3": 2.523218,
+        "4": 2.90368,
+        "5": 3.281097,
+        "6": 3.676777
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 2.567,
+          "a": 4.139,
+          "cf": 1.8975,
+          "cr": 1.8975
+        },
+        "Max": {
+          "sa": 2.807,
+          "a": 4.569,
+          "cf": 2.1835,
+          "cr": 2.1835
+        },
+        "Min": {
+          "sa": 2.318,
+          "a": 3.7,
+          "cf": 1.56,
+          "cr": 1.56
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW506C_Fly Jib": {
+      "family": "UNIC",
+      "boom_weight": 981.78,
+      "g": 0.1695,
+      "super_weight": 170,
+      "super_cg": -0.216,
+      "r0": 0.187,
+      "carrier_weight": 3724,
+      "carrier_cg": 0.785,
+      "boom_lengths": {
+        "1": 3.93,
+        "2": 6.33,
+        "3": 8.72,
+        "4": 11.05,
+        "5": 13.38,
+        "6": 15.71
+      },
+      "boom_cg": {
+        "1": 1.952233,
+        "2": 3.416408,
+        "3": 4.503447,
+        "4": 4.938262,
+        "5": 5.377515,
+        "6": 5.794583
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.081,
+          "a": 5.177,
+          "cf": 2.3745,
+          "cr": 2.3745
+        },
+        "Max": {
+          "sa": 3.488,
+          "a": 5.902,
+          "cf": 2.8605,
+          "cr": 2.8605
+        },
+        "Min": {
+          "sa": 2.8,
+          "a": 4.678,
+          "cf": 2.04,
+          "cr": 2.04
+        }
+      },
+      "source": "Point Load UNIC all excl 706.xlsx"
+    },
+    "URW706CDE": {
+      "family": "UNIC",
+      "boom_weight": 2012,
+      "g": 0.1995,
+      "super_weight": 510,
+      "super_cg": -0.31,
+      "r0": 0.525,
+      "carrier_weight": 5618,
+      "carrier_cg": 1.243,
+      "boom_lengths": {
+        "1": 4.804,
+        "2": 7.704,
+        "3": 10.604,
+        "4": 13.454,
+        "5": 16.304,
+        "6": 19.154
+      },
+      "boom_cg": {
+        "1": 2.497,
+        "2": 4.39,
+        "3": 5.782,
+        "4": 6.324,
+        "5": 6.87,
+        "6": 7.405
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.568,
+          "a": 5.856,
+          "cf": 2.633,
+          "cr": 2.633
+        },
+        "Max": {
+          "sa": 3.909,
+          "a": 6.462,
+          "cf": 3.039,
+          "cr": 3.039
+        },
+        "Min": {
+          "sa": 3.219,
+          "a": 5.236,
+          "cf": 2.217,
+          "cr": 2.217
+        }
+      },
+      "source": "Point Load UNIC URW706CDEseries.xls"
+    },
+    "URW706CDEM": {
+      "family": "UNIC",
+      "boom_weight": 2012,
+      "g": 0.1995,
+      "super_weight": 510,
+      "super_cg": -0.31,
+      "r0": 0.525,
+      "carrier_weight": 5778,
+      "carrier_cg": 1.243,
+      "boom_lengths": {
+        "1": 4.804,
+        "2": 7.704,
+        "3": 10.604,
+        "4": 13.454,
+        "5": 16.304,
+        "6": 19.154
+      },
+      "boom_cg": {
+        "1": 2.497,
+        "2": 4.39,
+        "3": 5.782,
+        "4": 6.324,
+        "5": 6.87,
+        "6": 7.405
+      },
+      "outrigger": {
+        "Half": {
+          "sa": 3.568,
+          "a": 5.856,
+          "cf": 2.633,
+          "cr": 2.633
+        },
+        "Max": {
+          "sa": 3.909,
+          "a": 6.462,
+          "cf": 3.039,
+          "cr": 3.039
+        },
+        "Min": {
+          "sa": 3.219,
+          "a": 5.236,
+          "cf": 2.217,
+          "cr": 2.217
+        }
+      },
+      "source": "Point Load UNIC URW706CDEseries.xls"
+    }
+  },
+  "notes": [
+    "Maeda data extracted from Point Load Maeda 1t to 4t (excluding hook).xlsx.",
+    "UNIC data extracted from Point Load UNIC all excl 706.xlsx.",
+    "UNIC 706 data extracted from Point Load UNIC URW706CDEseries.xls.",
+    "Hook mass is added in the Streamlit app as a user input.",
+    "UNIC source workbook provides combined 2C outrigger depth; app splits it equally into front/rear spans for the MVP calculation.",
+    "MC815C point-load workbooks are encrypted and require an unlocked copy or password before extraction."
+  ]
+}
