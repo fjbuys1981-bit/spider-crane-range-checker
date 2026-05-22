@@ -1,5 +1,4 @@
 import io
-import math
 import re
 from pathlib import Path
 from datetime import datetime
@@ -7,7 +6,6 @@ from datetime import datetime
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
-import streamlit.components.v1 as components
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 
@@ -486,9 +484,6 @@ def create_pdf_report_bytes(summary_df, result_df, title):
 
 
 def cad_image_path(crane_name):
-    path = ASSET_DIR / f"{crane_name}.png"
-    if path.exists() and path.stat().st_size > 12000:
-        return path
     return None
 
 
@@ -535,192 +530,83 @@ def draw_wrapped(draw, text, xy, font, fill, max_width, line_gap=6):
 
 
 def create_lift_plan_pdf_bytes(crane_name, card, working_radius, boom_length, hook_height, total_load, allowed_load, status, utilisation, setup, floor_length, floor_width):
-    width, height = 1600, 1100
+    width, height = 1240, 1754
     image = Image.new("RGB", (width, height), "#EEF1F3")
     draw = ImageDraw.Draw(image)
     title_font = load_font(44, bold=True)
-    h_font = load_font(28, bold=True)
-    body_font = load_font(24)
-    small_font = load_font(19)
+    h_font = load_font(30, bold=True)
+    body_font = load_font(25)
+    small_font = load_font(20)
     status_color = PH_RED if status == "RED ZONE" else PH_ORANGE if status == "CHECK ZONE" else PH_GREEN
 
-    draw.rounded_rectangle((55, 45, width - 55, 150), radius=14, fill=PH_BLACK)
-    draw.rectangle((55, 45, 72, 150), fill=PH_YELLOW)
-    draw.text((95, 70), "PRESTON HIRE", font=title_font, fill=PH_YELLOW)
-    draw.text((95, 118), f"{crane_name} Lift Plan", font=body_font, fill=PH_WHITE)
+    margin = 58
+    draw.rounded_rectangle((margin, 45, width - margin, 155), radius=14, fill=PH_BLACK)
+    draw.rectangle((margin, 45, margin + 18, 155), fill=PH_YELLOW)
+    draw.text((95, 68), "PRESTON HIRE", font=title_font, fill=PH_YELLOW)
+    draw.text((95, 118), f"{crane_name} Spider Crane Range Checker", font=body_font, fill=PH_WHITE)
 
-    draw.rounded_rectangle((55, 185, 510, 510), radius=12, fill="white", outline=PH_LINE, width=2)
-    draw.ellipse((85, 218, 123, 256), fill=status_color)
-    draw.text((140, 220), status, font=h_font, fill=PH_BLACK)
-    y = 285
+    draw.rounded_rectangle((margin, 185, width - margin, 285), radius=12, fill=status_color)
+    draw.text((88, 214), f"STATUS: {status}", font=h_font, fill=PH_WHITE)
+    draw.text((88, 252), f"{utilisation:.1f}% of selected setup capacity", font=body_font, fill=PH_WHITE)
+
+    left_box = (margin, 315, 590, 660)
+    right_box = (620, 315, width - margin, 660)
+    draw.rounded_rectangle(left_box, radius=12, fill="white", outline=PH_LINE, width=2)
+    draw.rounded_rectangle(right_box, radius=12, fill="white", outline=PH_LINE, width=2)
+
+    draw.text((88, 345), "Lift Inputs", font=h_font, fill=PH_BLACK)
+    y = 397
     required_rows = [
         ("Radius", f"{working_radius:.2f} m"),
         ("Load weight", f"{total_load:.0f} kg"),
         ("Boom length", f"{boom_length:.2f} m"),
         ("Hook height", f"{hook_height:.2f} m"),
+    ]
+    for label, value in required_rows:
+        draw.text((88, y), label, font=small_font, fill=PH_MUTED)
+        draw.text((318, y - 5), value, font=body_font, fill=PH_BLACK)
+        y += 50
+
+    draw.text((650, 345), "Setup", font=h_font, fill=PH_BLACK)
+    y = 397
+    setup_rows = [
         ("Outriggers", setup),
         ("Floor area", f"{floor_length:.2f} x {floor_width:.2f} m"),
         ("Estimated capacity", f"{allowed_load:.0f} kg"),
         ("Utilisation", f"{utilisation:.1f}%"),
     ]
-    for label, value in required_rows:
-        draw.text((90, y), label, font=small_font, fill=PH_MUTED)
-        draw.text((300, y - 4), value, font=body_font, fill=PH_BLACK)
-        y += 42
+    for label, value in setup_rows:
+        draw.text((650, y), label, font=small_font, fill=PH_MUTED)
+        draw.text((880, y - 5), value, font=body_font, fill=PH_BLACK)
+        y += 50
 
-    draw.rounded_rectangle((545, 185, width - 55, 790), radius=12, fill="white", outline=PH_LINE, width=2)
+    chart_box = (margin, 700, width - margin, 1500)
+    draw.rounded_rectangle(chart_box, radius=12, fill="white", outline=PH_LINE, width=2)
+    draw.text((88, 730), "Crane Chart Reference", font=h_font, fill=PH_BLACK)
     visual_path = chart_image_path(crane_name) or cad_image_path(crane_name)
     if visual_path:
         visual = Image.open(visual_path).convert("RGB")
-        visual = ImageOps.contain(visual, (960, 545), method=Image.Resampling.LANCZOS)
-        paste_x = 545 + (1000 - visual.width) // 2
-        paste_y = 220 + (520 - visual.height) // 2
+        visual = ImageOps.contain(visual, (1060, 690), method=Image.Resampling.LANCZOS)
+        paste_x = margin + (width - margin * 2 - visual.width) // 2
+        paste_y = 780 + (690 - visual.height) // 2
         image.paste(visual, (paste_x, paste_y))
-        draw.rounded_rectangle((570, 205, 1045, 286), radius=10, fill=(255, 255, 255), outline=PH_LINE, width=2)
-        draw.text((592, 222), f"Radius: {working_radius:.2f} m", font=body_font, fill=PH_BLACK)
-        draw.text((592, 254), f"Load: {total_load:.0f} kg   Boom: {boom_length:.2f} m", font=body_font, fill=PH_BLACK)
-        draw.text((570, 750), f"Reference image: {visual_path.name}", font=small_font, fill=PH_MUTED)
+        draw.text((88, 1465), f"Reference image: {visual_path.name}", font=small_font, fill=PH_MUTED)
     else:
-        draw.text((600, 460), "Reference image not available for this crane yet.", font=h_font, fill=PH_MUTED)
+        draw.text((120, 1080), "Reference image not available for this crane yet.", font=h_font, fill=PH_MUTED)
 
-    draw.rounded_rectangle((55, 830, width - 55, 1010), radius=12, fill="white", outline=PH_LINE, width=2)
-    draw.text((85, 860), "Range Parameters", font=h_font, fill=PH_BLACK)
-    brochure_text = (
+    draw.rounded_rectangle((margin, 1530, width - margin, 1660), radius=12, fill="white", outline=PH_LINE, width=2)
+    note_text = (
         f"{card['tagline']} Max radius {card['max_radius_m']:.2f} m. "
         f"Max boom length {card['boom_length_m']:.2f} m. "
         f"Min-radius capacity {card['capacity_min_radius']}. "
         f"Max-radius capacity {card['capacity_max_radius']}. "
-        "This is a spider crane range check only; confirm the exact manufacturer load chart, configuration, ground conditions, and lift plan before site use."
+        "Confirm the exact manufacturer load chart, configuration, ground conditions, and lift plan before site use."
     )
-    draw_wrapped(draw, brochure_text, (85, 905), body_font, PH_BLACK, width - 170)
+    draw_wrapped(draw, note_text, (88, 1560), small_font, PH_BLACK, width - 176)
 
     buffer = io.BytesIO()
     image.save(buffer, format="PDF", resolution=150.0)
     return buffer.getvalue()
-
-
-def create_lift_drawing_svg(crane_name, card, working_radius, boom_length, hook_height, total_load, allowed_load, status, setup, floor_length, floor_width):
-    max_span = max(card["max_radius_m"], boom_length, working_radius, 1)
-    scale = 555 / max_span
-    base_x = 96
-    ground_y = 392
-    radius_x = base_x + working_radius * scale
-    boom_angle = math.atan2(max(hook_height, 0.5), max(working_radius, 0.5))
-    boom_end_x = base_x + min(boom_length, max_span) * math.cos(boom_angle) * scale
-    boom_end_y = ground_y - min(boom_length, max_span) * math.sin(boom_angle) * scale
-    boom_end_y = max(72, min(ground_y - 32, boom_end_y))
-    hook_x = radius_x
-    hook_y = max(boom_end_y + 45, ground_y - hook_height * scale)
-    hook_y = min(ground_y - 22, hook_y)
-    status_color = PH_RED if status == "RED ZONE" else PH_ORANGE if status == "CHECK ZONE" else PH_GREEN
-
-    def text(value):
-        return str(value).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
-  <style>
-    .title {{ font: 700 24px Arial, sans-serif; fill: #F5D800; }}
-    .white {{ font: 13px Arial, sans-serif; fill: #FFFFFF; }}
-    .label {{ font: 700 15px Arial, sans-serif; fill: #1A1A1A; }}
-    .small {{ font: 13px Arial, sans-serif; fill: #1A1A1A; }}
-    .muted {{ font: 12px Arial, sans-serif; fill: #6B7280; }}
-  </style>
-  <rect width="900" height="560" fill="#EEF1F3"/>
-  <rect x="28" y="22" width="844" height="70" rx="8" fill="#1A1A1A"/>
-  <rect x="28" y="22" width="10" height="70" fill="#F5D800"/>
-  <text x="55" y="52" class="title">PRESTON HIRE</text>
-  <text x="55" y="76" class="white">{text(crane_name)} range sketch | Status: {text(status)}</text>
-
-  <rect x="614" y="118" width="238" height="228" rx="8" fill="#FFFFFF" stroke="#D8DEE4"/>
-  <circle cx="636" cy="143" r="9" fill="{status_color}"/>
-  <text x="654" y="148" class="label">{text(status)}</text>
-  <text x="630" y="184" class="small">Total load: {total_load:.0f} kg</text>
-  <text x="630" y="208" class="small">Est. envelope: {allowed_load:.0f} kg</text>
-  <text x="630" y="232" class="small">Radius: {working_radius:.2f} m</text>
-  <text x="630" y="256" class="small">Boom length: {boom_length:.2f} m</text>
-  <text x="630" y="280" class="small">Hook height: {hook_height:.2f} m</text>
-  <text x="630" y="304" class="small">Outriggers: {text(setup)}</text>
-  <text x="630" y="328" class="small">Floor: {floor_length:.2f} x {floor_width:.2f} m</text>
-
-  <line x1="55" y1="{ground_y}" x2="805" y2="{ground_y}" stroke="#1A1A1A" stroke-width="3"/>
-  <rect x="{base_x - 42}" y="{ground_y - 22}" width="84" height="22" rx="4" fill="#333"/>
-  <circle cx="{base_x - 26}" cy="{ground_y + 4}" r="9" fill="#555"/>
-  <circle cx="{base_x + 26}" cy="{ground_y + 4}" r="9" fill="#555"/>
-  <line x1="{base_x - 62}" y1="{ground_y}" x2="{base_x - 112}" y2="{ground_y + 46}" stroke="#27AE60" stroke-width="8"/>
-  <line x1="{base_x + 62}" y1="{ground_y}" x2="{base_x + 122}" y2="{ground_y + 46}" stroke="#27AE60" stroke-width="8"/>
-  <rect x="{base_x - 128}" y="{ground_y + 40}" width="44" height="8" fill="#1A1A1A"/>
-  <rect x="{base_x + 106}" y="{ground_y + 40}" width="44" height="8" fill="#1A1A1A"/>
-  <line x1="{base_x}" y1="{ground_y - 20}" x2="{boom_end_x:.1f}" y2="{boom_end_y:.1f}" stroke="#27AE60" stroke-width="15" stroke-linecap="round"/>
-  <line x1="{boom_end_x:.1f}" y1="{boom_end_y:.1f}" x2="{hook_x:.1f}" y2="{hook_y:.1f}" stroke="#1A1A1A" stroke-width="3"/>
-  <circle cx="{hook_x:.1f}" cy="{hook_y:.1f}" r="10" fill="#E8400C"/>
-  <path d="M {hook_x - 8:.1f} {hook_y + 8:.1f} q 8 18 16 0" fill="none" stroke="#1A1A1A" stroke-width="4"/>
-
-  <line x1="{base_x}" y1="{ground_y + 70}" x2="{radius_x:.1f}" y2="{ground_y + 70}" stroke="#E8400C" stroke-width="3"/>
-  <line x1="{base_x}" y1="{ground_y + 58}" x2="{base_x}" y2="{ground_y + 82}" stroke="#E8400C" stroke-width="3"/>
-  <line x1="{radius_x:.1f}" y1="{ground_y + 58}" x2="{radius_x:.1f}" y2="{ground_y + 82}" stroke="#E8400C" stroke-width="3"/>
-  <text x="{(base_x + radius_x) / 2 - 42:.1f}" y="{ground_y + 100}" class="label">Radius {working_radius:.2f} m</text>
-  <text x="{boom_end_x - 48:.1f}" y="{boom_end_y - 14:.1f}" class="label">Boom {boom_length:.2f} m</text>
-  <text x="{hook_x + 16:.1f}" y="{hook_y + 5:.1f}" class="label">Load {total_load:.0f} kg</text>
-
-  <text x="55" y="520" class="muted">Spider crane range sketch only. Confirm manufacturer load chart, boom configuration, ground conditions, and lift plan before use.</text>
-</svg>"""
-
-
-def create_lift_drawing_html(svg):
-    return f"""<!doctype html>
-<html>
-<head><meta charset="utf-8"><title>Spider Crane Range Sketch</title></head>
-<body style="margin:0;background:#eef1f3;">{svg}</body>
-</html>"""
-
-
-def visual_preview_html(crane_name, working_radius, boom_length, total_load, status):
-    path = chart_image_path(crane_name) or cad_image_path(crane_name)
-    if not path:
-        return create_lift_drawing_html(
-            create_lift_drawing_svg(
-                crane_name,
-                FLEET_GUIDE[crane_name],
-                working_radius,
-                boom_length,
-                0,
-                total_load,
-                0,
-                status,
-                "Max footprint",
-                0,
-                0,
-            )
-        )
-
-    import base64
-
-    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
-    mime = "image/jpeg" if path.suffix.lower() in {".jpg", ".jpeg"} else "image/png"
-    color = PH_RED if status == "RED ZONE" else PH_ORANGE if status == "CHECK ZONE" else PH_GREEN
-    return f"""<!doctype html>
-<html>
-<body style="margin:0;background:#eef1f3;font-family:Arial,sans-serif;">
-  <div style="width:100%;height:560px;box-sizing:border-box;padding:18px;background:#eef1f3;">
-    <div style="background:#1A1A1A;color:#F5D800;padding:14px 18px;border-radius:8px;font-weight:700;font-size:22px;">
-      PRESTON HIRE | {crane_name} Lift Reference
-    </div>
-    <div style="position:relative;background:white;border:1px solid #D8DEE4;border-radius:8px;margin-top:14px;height:455px;overflow:hidden;">
-      <img src="data:{mime};base64,{encoded}" style="width:100%;height:100%;object-fit:contain;">
-      <div style="position:absolute;top:16px;left:16px;background:white;border:2px solid {color};border-radius:8px;padding:12px 16px;box-shadow:0 4px 18px rgba(0,0,0,.12);font-size:18px;">
-        <div style="font-weight:700;color:{color};margin-bottom:6px;">{status}</div>
-        <div>Radius: <strong>{working_radius:.2f} m</strong></div>
-        <div>Load: <strong>{total_load:.0f} kg</strong></div>
-        <div>Boom length: <strong>{boom_length:.2f} m</strong></div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>"""
-
-
-def clean_slug(value):
-    return re.sub(r"[^a-zA-Z0-9_-]+", "-", value).strip("-").lower()
 
 
 st.markdown(
@@ -846,10 +732,6 @@ selected_setup = resolve_setup(card, requested_setup, floor_length, floor_width)
 status, status_color, utilisation, allowed_load, issues, warnings = get_brochure_status(
     card, working_radius, boom_length, total_load, selected_setup, floor_length, floor_width
 )
-drawing_svg = create_lift_drawing_svg(
-    crane_name, card, working_radius, boom_length, hook_height, total_load, allowed_load, status, selected_setup, floor_length, floor_width
-)
-
 st.write("")
 st.markdown('<h3 class="section-title">Fleet Quick Reference</h3>', unsafe_allow_html=True)
 f1, f2, f3, f4 = st.columns(4)
@@ -1039,28 +921,25 @@ with tab_range:
     st.plotly_chart(fig, use_container_width=True)
 
 with tab_drawing:
-    st.markdown('<h3 class="section-title">Lift Drawing</h3>', unsafe_allow_html=True)
-    components.html(visual_preview_html(crane_name, working_radius, boom_length, total_load, status), height=580, scrolling=False)
-    d1, d2 = st.columns(2)
-    filename_base = clean_slug(f"{crane_name}-lift-sketch")
-    with d1:
-        st.download_button(
-            "Download Drawing SVG",
-            drawing_svg.encode("utf-8"),
-            f"{filename_base}.svg",
-            "image/svg+xml",
-            use_container_width=True,
-            key="drawing_tab_svg",
-        )
-    with d2:
-        st.download_button(
-            "Download Drawing HTML",
-            create_lift_drawing_html(drawing_svg).encode("utf-8"),
-            f"{filename_base}.html",
-            "text/html",
-            use_container_width=True,
-            key="drawing_tab_html",
-        )
+    st.markdown('<h3 class="section-title">Lift Plan Preview</h3>', unsafe_allow_html=True)
+    chart_path = chart_image_path(crane_name) or cad_image_path(crane_name)
+    if chart_path:
+        st.image(str(chart_path), use_container_width=True)
+    else:
+        st.info("No chart image is available for this crane yet.")
+    p1, p2, p3, p4 = st.columns(4)
+    p1.metric("Radius", f"{working_radius:.2f} m")
+    p2.metric("Load Weight", f"{total_load:.0f} kg")
+    p3.metric("Boom Length", f"{boom_length:.2f} m")
+    p4.metric("Hook Height", f"{hook_height:.2f} m")
+    p5, p6, p7 = st.columns(3)
+    p5.metric("Outriggers", selected_setup)
+    p6.metric("Floor Size", f"{floor_length:.2f} x {floor_width:.2f} m")
+    p7.metric("Status", status)
+    st.info(
+        f"Lift plan inputs: hook height {hook_height:.2f} m, floor size {floor_length:.2f} x {floor_width:.2f} m, "
+        f"outrigger setup {selected_setup}."
+    )
 
 with tab_fleet:
     st.markdown('<h3 class="section-title">Preston Hire Crane Quick Reference</h3>', unsafe_allow_html=True)
@@ -1113,14 +992,18 @@ with tab_export:
             key="export_pdf_lift_plan",
         )
     with e3:
-        st.download_button(
-            "Download Drawing SVG",
-            drawing_svg.encode("utf-8"),
-            f"{filename_base}.svg",
-            "image/svg+xml",
-            use_container_width=True,
-            key="export_svg",
-        )
+        chart_path = chart_image_path(crane_name) or cad_image_path(crane_name)
+        if chart_path:
+            st.download_button(
+                "Download Chart Image",
+                chart_path.read_bytes(),
+                chart_path.name,
+                "image/jpeg" if chart_path.suffix.lower() in {".jpg", ".jpeg"} else "image/png",
+                use_container_width=True,
+                key="export_chart_image",
+            )
+        else:
+            st.info("No chart image is available to download.")
 
 with tab_notes:
     st.markdown('<h3 class="section-title">MVP Notes</h3>', unsafe_allow_html=True)
